@@ -1,5 +1,10 @@
 # All unpinned blobs below are extracted from mondrian V816.0.8.0.UMNMIXM
 
+# Current blobs with ELF checks disabled:
+# audio.primary.taro depends on vendor.qti.hardware.pal@1.0-impl, which is a gnu makefile target
+# libalAILDC, libalhLDC, libalLDC, libmorpho_ubwc, libTrueSight depends on NDK libnativewindow and build is unable to resolve its symbols
+# libar-pal depends on libagmclient, which is a gnu makefile target
+
 # ACDB
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_workspaceFileXml.qwsp
@@ -117,10 +122,8 @@ vendor/etc/microphone_characteristics.xml
 vendor/etc/usecaseKvManager.xml
 
 # Audio
-# audio.primary.taro depends on vendor.qti.hardware.pal@1.0-impl, which is a gnu makefile target
-vendor/lib64/hw/audio.primary.taro.so:vendor/lib64/hw/audio.primary.taro-mondrian.so;DISABLE_CHECKELF
+vendor/lib64/hw/audio.primary.taro.so:vendor/lib64/hw/audio.primary.taro-mondrian.so;DISABLE_CHECKELF;FIX_SONAME
 vendor/lib64/libagm.so
-# libar-pal depends on libagmclient, which is a gnu makefile target
 vendor/lib64/libar-pal.so;DISABLE_CHECKELF
 vendor/lib64/libkaraokepal.so
 
@@ -729,21 +732,17 @@ vendor/lib64/libMiMotion.so
 vendor/lib64/libQnnHtpAltPrepV69Stub.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libSnpeHtpV69Stub.so
-# libTrueSight depends on NDK libnativewindow and build is unable to resolve its symbols
 vendor/lib64/libTrueSight.so;DISABLE_CHECKELF
 vendor/lib64/libXMFaceFocus.so
 vendor/lib64/libaidenoiser.so
-# libalAILDC depends on NDK libnativewindow and build is unable to resolve its symbols
 vendor/lib64/libalAILDC.so;DISABLE_CHECKELF
 vendor/lib64/libalAI_Seg.so
 vendor/lib64/libalCFR.so
-# libalLDC depends on NDK libnativewindow and build is unable to resolve its symbols
 vendor/lib64/libalLDC.so;DISABLE_CHECKELF
 vendor/lib64/libalNN.so
 vendor/lib64/libalNN_engine.so
 vendor/lib64/libalNN_gpu.so
-vendor/lib64/libalNN_snpe.so
-# libalhLDC depends on NDK libnativewindow and build is unable to resolve its symbols
+vendor/lib64/libalNN_snpe.so;FIX_SONAME
 vendor/lib64/libalhLDC.so;DISABLE_CHECKELF
 vendor/lib64/libanc_dc_base.so
 vendor/lib64/libanc_hdr.so
@@ -838,7 +837,6 @@ vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
-# libTrueSight depends on NDK libnativewindow and build is unable to resolve its symbols
 vendor/lib64/libmorpho_ubwc.so;DISABLE_CHECKELF
 vendor/lib64/libmorpho_video_stabilizer.so
 vendor/lib64/libmpbase.so
@@ -1012,9 +1010,8 @@ vendor/etc/display/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.json
 vendor/etc/mdss_dsi_m11a_42_02_0a_dsc_cmd_mi.xml
 
 # Fingerprint
-odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
-vendor/lib64/hw/fingerprint.fpc_fod.so:vendor/lib64/hw/fingerprint.fpc_fod.default.so
-vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so
+vendor/lib64/hw/fingerprint.fpc_fod.so:vendor/lib64/hw/fingerprint.fpc_fod.default.so;FIX_SONAME
+vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 vendor/lib64/libgf_hal.so
 
 # Graphics (Adreno firmware)

@@ -10,8 +10,12 @@ $(call inherit-product, device/xiaomi/mondrian/device.mk)
 # MIUI Leica Camera
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
-# Inherit from common lineage configuration
+# Inherit from common CrDroid configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+TARGET_DISABLE_EPPE := true
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_64_BIT_APPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_NAME := lineage_mondrian
 PRODUCT_DEVICE := mondrian

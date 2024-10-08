@@ -37,3 +37,6 @@ TARGET_QTI_VIBRATOR_EFFECT_LIB := libqtivibratoreffect.xiaomi
 TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM := true
 # trying to fix overriding commands for target issue
 BUILD_BROKEN_DUP_RULES := true
+
+BOARD_HAS_NO_RECOVERY := false
+TARGET_RECOVERY_IMAGE := true

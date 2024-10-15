@@ -7,8 +7,8 @@
 # Inherit from mondrian device
 $(call inherit-product, device/xiaomi/mondrian/device.mk)
 
-# MIUI Leica Camera
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+# MIUI Camera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera-mondrian/miuicamera-mondrian-vendor.mk)
 
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)

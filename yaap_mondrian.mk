@@ -7,13 +7,16 @@
 # Inherit from mondrian device
 $(call inherit-product, device/xiaomi/mondrian/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common yaap configuration
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+
+# Gapps
+TARGET_BUILD_GAPPS := true
 
 # MIUI Camera
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera-mondrian/miuicamera-mondrian-vendor.mk)
 
-PRODUCT_NAME := lineage_mondrian
+PRODUCT_NAME := yaap_mondrian
 PRODUCT_DEVICE := mondrian
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO

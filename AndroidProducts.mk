@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_mondrian.mk
+    $(LOCAL_DIR)/yaap_mondrian.mk
+
+COMMON_LUNCH_CHOICES := \
+ yaap_mondrian-user \
+ yaap_mondrian-userdebug \
+ yaap_mondrian-eng

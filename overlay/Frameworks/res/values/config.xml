@@ -400,4 +400,6 @@
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
     <string name="config_mainBuiltInDisplayCutout" translatable="false">M 0,0 H -34 V 120 H 34 V 0 H 0 Z</string>
+      <!-- Whether devices suports in-display fingerprint when screen is off -->
+     <bool name="config_supportScreenOffUdfps">true</bool>
 </resources>

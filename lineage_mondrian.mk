@@ -27,3 +27,5 @@ PRODUCT_SYSTEM_DEVICE := mondrian
 BUILD_FINGERPRINT := POCO/mondrian_global/mondrian:14/UKQ1.230804.001/V816.0.8.0.UMNMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+TARGET_HAS_UDFPS := true

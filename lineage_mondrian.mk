@@ -10,6 +10,9 @@ $(call inherit-product, device/xiaomi/mondrian/device.mk)
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# MIUI Camera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera-mondrian/miuicamera-mondrian-vendor.mk)
+
 PRODUCT_NAME := lineage_mondrian
 PRODUCT_DEVICE := mondrian
 PRODUCT_MANUFACTURER := Xiaomi

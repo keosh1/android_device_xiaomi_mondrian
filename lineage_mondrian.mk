@@ -7,8 +7,19 @@
 # Inherit from mondrian device
 $(call inherit-product, device/xiaomi/mondrian/device.mk)
 
-# Inherit from common lineage configuration
+# MIUI Camera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera-mondrian/miuicamera-mondrian-vendor.mk)
+
+# Inherit from common CrDroid configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+TARGET_DISABLE_EPPE := true
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_64_BIT_APPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+PRODUCT_NO_CAMERA := false
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_NAME := lineage_mondrian
 PRODUCT_DEVICE := mondrian

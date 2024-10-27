@@ -29,6 +29,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := POCO/mondrian_global/mondrian:14/UKQ1.230804.001/V816.0.8.0.UMNMIXM:user/release-keys
 
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
 # RisingOS stuff
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_CHIPSET="Snapdragon 8+ Gen1" \
@@ -39,4 +41,5 @@ PRODUCT_NO_CAMERA := false
 TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 # RisingOS GMS build flags
+WITH_GMS := true
 TARGET_DEFAULT_PIXEL_LAUNCHER := false

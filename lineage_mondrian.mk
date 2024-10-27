@@ -10,9 +10,6 @@ $(call inherit-product, device/xiaomi/mondrian/device.mk)
 # MIUI Camera
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera-mondrian/miuicamera-mondrian-vendor.mk)
 
-# Gms 
-WITH_GMS := false
-
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
@@ -36,6 +33,7 @@ BUILD_FINGERPRINT := POCO/mondrian_global/mondrian:14/UKQ1.230804.001/V816.0.8.0
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_CHIPSET="Snapdragon 8+ Gen1" \
     RISING_MAINTAINER="keosh"
+RISING_PACKAGE_TYPE := GAPPS
 TARGET_ENABLE_BLUR := true
 PRODUCT_NO_CAMERA := false
 TARGET_HAS_UDFPS := true

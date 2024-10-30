@@ -33,8 +33,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # RisingOS stuff
 PRODUCT_BUILD_PROP_OVERRIDES += \
-RISING_CHIPSET="Snapdragon 8+ Gen1" \
-RISING_MAINTAINER="keosh"
+RisingChipset="Snapdragon 8+ Gen1" \
+RisingMaintainer="keosh"
 RISING_PACKAGE_TYPE := GAPPS
 TARGET_ENABLE_BLUR := true
 PRODUCT_NO_CAMERA := false

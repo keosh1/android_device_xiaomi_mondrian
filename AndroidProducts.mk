@@ -6,3 +6,9 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_mondrian.mk
+	
+	
+COMMON_LUNCH_CHOICES := \
+    lineage_marble-user \
+    lineage_marble-userdebug \
+    lineage_marble-eng

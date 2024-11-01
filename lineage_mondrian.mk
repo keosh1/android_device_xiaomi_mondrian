@@ -12,6 +12,11 @@ $(call inherit-product-if-exists, vendor/xiaomi/miuicamera-mondrian/miuicamera-m
 
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Evolution-XYZ
+WITH_GMS := true
+TARGET_HAS_UDFPS := true
+TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_BUILD_APERTURE_CAMERA := true
 
 PRODUCT_NAME := lineage_mondrian
 PRODUCT_DEVICE := mondrian
@@ -30,8 +35,3 @@ PRODUCT_SYSTEM_DEVICE := mondrian
 BUILD_FINGERPRINT := POCO/mondrian_global/mondrian:14/UKQ1.230804.001/V816.0.8.0.UMNMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-TARGET_BOOT_ANIMATION_RES := 1440
-# Evolution-XYZ
-WITH_GMS := true
-TARGET_HAS_UDFPS := true

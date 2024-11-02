@@ -7,8 +7,9 @@
 # Inherit from mondrian device
 $(call inherit-product, device/xiaomi/mondrian/device.mk)
 
-# MIUI Camera
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera-mondrian/miuicamera-mondrian-vendor.mk)
+TARGET_DISABLE_EPPE := true
+TARGET_SUPPORTS_64_BIT_APPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)

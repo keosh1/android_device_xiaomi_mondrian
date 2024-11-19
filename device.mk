@@ -15,7 +15,7 @@ $(call inherit-product, device/xiaomi/sm8450-common/common.mk)
 $(call inherit-product, vendor/xiaomi/mondrian/mondrian-vendor.mk)
 
 # Call the MiuiCamera setup
-$(call inherit-product-if-exists, device/xiaomi/miuicamera-mondrian/device.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/miuicamera.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \

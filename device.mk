@@ -61,5 +61,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/properties/build_GL.prop:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/odm/etc/build_GL.prop
 
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.miui.notch=1 \
-    ro.product.mod_device=mondrian
+    ro.miui.notch=1

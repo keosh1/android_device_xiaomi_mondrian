@@ -13,7 +13,7 @@ $(call inherit-product, device/xiaomi/sm8450-common/common.mk)
 
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/mondrian/mondrian-vendor.mk)
-$(call inherit-product, vendor/xiaomi/miuicamera-mondrian/miuicamera-mondrian-vendor.mk)
+$(call inherit-product, vendor/xiaomi/miuicamera-mondrian/miuicamera-vendor.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \

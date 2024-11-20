@@ -11,7 +11,7 @@ include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 include vendor/xiaomi/mondrian/BoardConfigVendor.mk
 
 # Inherit from proprietary files for miuicamera
--include device/xiaomi/miuicamera-mondrian/BoardConfig.mk
+include vendor/xiaomi/miuicamera-mondrian/BoardConfig.mk
 
 DEVICE_PATH := device/xiaomi/mondrian
 
